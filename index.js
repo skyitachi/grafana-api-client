@@ -13,7 +13,6 @@ class GrafanaClient {
 
   createDashboard(dashboard, overwrite = false) {
     const endpoint = url.resolve(this._host, "/api/dashboards/db");
-    console.log(endpoint);
     return rp({
       method: "POST",
       uri: endpoint,
